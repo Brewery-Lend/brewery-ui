@@ -11,13 +11,17 @@ export interface LoanOrder {
   lender: string;
   nftContract: string;
   tokenId: number;
-  loanAmount: bigint;
+  loanAmount: bigint | string;  // Updated to accept string for mock data
   interestRate: number;
   duration: number;
   createdAt: number;
   fundedAt: number;
   repaymentDeadline: number;
   status: number; // 0 = OPEN, 1 = FUNDED, 2 = REPAID, 3 = DEFAULTED, 4 = CANCELLED
+  // Additional fields for RWA assets
+  nftImage?: string | null;
+  nftName?: string | null;
+  assetType?: string | null;
 }
 
 export enum LoanStatus {

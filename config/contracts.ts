@@ -26,7 +26,7 @@ export const breweryTestnet: Chain = {
 };
 
 // Contract addresses
-export const BREWLEND_CONTRACT_ADDRESS = '0x567D29D537aCc71bDAea0042168Bc110287a59f2'; // Example address, replace with actual deployed address
+export const BREWLEND_CONTRACT_ADDRESS = '0x0fee6C4900f5ba246Dbb58D24A9008A7a85B2c10'; // Example address, replace with actual deployed address
 export const USDC_CONTRACT_ADDRESS = '0xDC9CFD00e9f6D066D9BcCd1A4aCCcEbc6EbCA71c'; // Example address, replace with actual deployed address
 
 // Contract deployment block numbers (for event indexing efficiency)
