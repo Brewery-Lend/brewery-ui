@@ -180,7 +180,7 @@ export default function LendPage() {
                 <div className="text-center p-12 espresso-card border border-[#303030]">
                   <div className="mb-4">
                     <Image 
-                      src="/espresso-logo.svg" 
+                      src="/espresso-logo.png" 
                       alt="No orders" 
                       width={80} 
                       height={80} 
@@ -225,7 +225,7 @@ export default function LendPage() {
                     <div className="text-center p-12 espresso-card border border-[#303030]">
                       <div className="mb-4">
                         <Image 
-                          src="/espresso-logo.svg" 
+                          src="/espresso-logo.png" 
                           alt="No orders" 
                           width={80} 
                           height={80} 
@@ -248,7 +248,7 @@ export default function LendPage() {
                 <div className="text-center p-12 espresso-card border border-[#303030]">
                   <div className="mb-4">
                     <Image 
-                      src="/espresso-logo.svg" 
+                      src="/espresso-logo.png" 
                       alt="Connect wallet" 
                       width={80} 
                       height={80} 
@@ -269,7 +269,7 @@ export default function LendPage() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center mb-4">
             <Image
-              src="/espresso-logo.svg"
+              src="/espresso-logo.png"
               alt="Espresso RWA Logo"
               width={30}
               height={30}

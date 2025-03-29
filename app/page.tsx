@@ -50,10 +50,10 @@ export default function Home() {
             <div className="md:w-1/2 flex justify-center">
               <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
                 <Image
-                  src="/espresso-logo.svg"
+                  src="/espresso-logo.png"
                   alt="Espresso RWA"
                   fill
-                  className="object-contain"
+                  className="object-contain w-[450px] h-[450px] md:w-[600px] md:h-[600px] lg:w-[900px] lg:h-[900px] scale-120"
                 />
               </div>
             </div>
@@ -255,7 +255,7 @@ export default function Home() {
             <div className="flex items-center mb-6 md:mb-0">
               <div className="relative h-10 w-10 mr-2">
                 <Image
-                  src="/espresso-logo.svg"
+                  src="/espresso-logo.png"
                   alt="Espresso RWA Logo"
                   width={40}
                   height={40}
