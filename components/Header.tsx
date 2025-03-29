@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import ConnectWallet from './ConnectWallet';
 
@@ -31,25 +32,36 @@ export default function Header({ usdcBalance }: HeaderProps) {
   const isCurrentPath = (path: string) => pathname === path;
 
   return (
-    <header className="bg-gray-900 border-b border-gray-800">
+    <header className="bg-[#121212] border-b border-[#303030] sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between h-20">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="flex items-center" onClick={closeMenu}>
-                <span className="text-amber-500 text-xl font-bold mr-1">Brewery</span>
-                <span className="text-white text-xl font-bold">Lend</span>
+                <div className="relative h-10 w-10 mr-2">
+                  {/* <Image
+                    src="/espresso-logo.png"
+                    alt="Espresso Logo"
+                    width={40}
+                    height={40}
+                    className="rounded-md"
+                  /> */}
+                </div>
+                <div>
+                  <span className="text-[#D48C3D] text-xl font-bold">Brewery</span>
+                  <span className="text-white text-xl font-bold ml-1">Lend</span>
+                </div>
               </Link>
             </div>
-            <nav className="hidden md:ml-6 md:flex md:space-x-4 items-center">
+            <nav className="hidden md:ml-8 md:flex md:space-x-6 items-center">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                     isCurrentPath(link.href)
-                      ? 'bg-gray-800 text-white'
-                      : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                      ? 'bg-[#1A1A1A] text-[#D48C3D] border-b-2 border-[#D48C3D]'
+                      : 'text-gray-300 hover:text-[#D48C3D]'
                   }`}
                 >
                   {link.label}
@@ -60,13 +72,13 @@ export default function Header({ usdcBalance }: HeaderProps) {
           <div className="hidden md:flex md:items-center">
             <ConnectWallet usdcBalance={usdcBalance} />
           </div>
-          <div className="flex md:hidden">
+          <div className="flex md:hidden items-center">
             <div className="flex items-center mr-2">
               <ConnectWallet usdcBalance={usdcBalance} />
             </div>
             <button
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-[#D48C3D] hover:bg-[#1A1A1A] focus:outline-none"
               aria-controls="mobile-menu"
               aria-expanded={isMenuOpen}
               onClick={toggleMenu}
@@ -110,7 +122,7 @@ export default function Header({ usdcBalance }: HeaderProps) {
       </div>
 
       {/* Mobile menu, show/hide based on menu state */}
-      <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`} id="mobile-menu">
+      <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden bg-[#1A1A1A]`} id="mobile-menu">
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {navLinks.map((link) => (
             <Link
@@ -118,8 +130,8 @@ export default function Header({ usdcBalance }: HeaderProps) {
               href={link.href}
               className={`block px-3 py-2 rounded-md text-base font-medium ${
                 isCurrentPath(link.href)
-                  ? 'bg-gray-800 text-white'
-                  : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                  ? 'bg-[#252525] text-[#D48C3D]'
+                  : 'text-gray-300 hover:bg-[#252525] hover:text-[#D48C3D]'
               }`}
               onClick={closeMenu}
             >
