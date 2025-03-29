@@ -63,7 +63,7 @@ export default function ConnectWallet({ usdcBalance }: ConnectWalletProps) {
                     <button
                       onClick={openConnectModal}
                       type="button"
-                      className="px-5 py-2.5 bg-[#D48C3D] hover:bg-[#9B4D1F] text-[#121212] font-semibold rounded-lg transition-all duration-200 hover:shadow-md hover:-translate-y-0.5"
+                      className="px-5 py-2.5 bg-[#FEBD59] hover:bg-[#DAA520] text-[#121212] font-semibold rounded-lg transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 amber-pulse"
                     >
                       Connect Wallet
                     </button>
@@ -91,17 +91,17 @@ export default function ConnectWallet({ usdcBalance }: ConnectWalletProps) {
                       </div>
                     </div>
 
-                    <div className="bg-[#1A1A1A] border border-[#303030] rounded-lg text-sm px-3 py-1.5 hidden md:block">
+                    <div className="bg-[#1A1A1A] border border-[#FEBD59] amber-border rounded-lg text-sm px-3 py-1.5 hidden md:block">
                       <div className="flex flex-col">
                         <span className="text-gray-400 text-xs">USDC Balance</span>
-                        <span className="text-[#D48C3D] font-medium">${formattedUsdcBalance}</span>
+                        <span className="text-[#FEBD59] amber-text font-medium">${formattedUsdcBalance}</span>
                       </div>
                     </div>
 
                     <button
                       onClick={openAccountModal}
                       type="button"
-                      className="flex items-center space-x-2 bg-[#1A1A1A] hover:bg-[#252525] border border-[#303030] rounded-lg px-4 py-2 transition-colors"
+                      className="flex items-center space-x-2 bg-[#1A1A1A] hover:bg-[#252525] border border-[#FEBD59] amber-border rounded-lg px-4 py-2 transition-colors"
                     >
                       <span className="text-gray-200 font-medium">
                         {account?.displayName || address?.substring(0, 6) + '...' + address?.substring(address.length - 4)}

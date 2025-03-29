@@ -49,7 +49,7 @@ export default function Header({ usdcBalance }: HeaderProps) {
                   />
                 </div>
                 <div>
-                  <span className="text-[#D48C3D] text-xl font-bold">Espresso</span>
+                  <span className="text-[#FEBD59] text-xl font-bold amber-text">Espresso</span>
                   <span className="text-white text-xl font-bold ml-1">RWA</span>
                 </div>
               </Link> */}
@@ -61,8 +61,8 @@ export default function Header({ usdcBalance }: HeaderProps) {
                   href={link.href}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                     isCurrentPath(link.href)
-                      ? 'bg-[#1A1A1A] text-[#D48C3D] border-b-2 border-[#D48C3D]'
-                      : 'text-gray-300 hover:text-[#D48C3D]'
+                      ? 'bg-[#1A1A1A] text-[#FEBD59] border-b-2 border-[#FEBD59] amber-text'
+                      : 'text-gray-300 hover:text-[#FEBD59]'
                   }`}
                 >
                   {link.label}
@@ -79,7 +79,7 @@ export default function Header({ usdcBalance }: HeaderProps) {
             </div>
             <button
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-[#D48C3D] hover:bg-[#1A1A1A] focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-[#FEBD59] hover:bg-[#1A1A1A] focus:outline-none"
               aria-controls="mobile-menu"
               aria-expanded={isMenuOpen}
               onClick={toggleMenu}
@@ -131,8 +131,8 @@ export default function Header({ usdcBalance }: HeaderProps) {
               href={link.href}
               className={`block px-3 py-2 rounded-md text-base font-medium ${
                 isCurrentPath(link.href)
-                  ? 'bg-[#252525] text-[#D48C3D]'
-                  : 'text-gray-300 hover:bg-[#252525] hover:text-[#D48C3D]'
+                  ? 'bg-[#252525] text-[#FEBD59] amber-text'
+                  : 'text-gray-300 hover:bg-[#252525] hover:text-[#FEBD59]'
               }`}
               onClick={closeMenu}
             >

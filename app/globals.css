@@ -4,17 +4,21 @@
   --background: #121212;
   --foreground: #FFFFFF;
   
-  /* Espresso theme colors */
-  --espresso-primary: #D48C3D;
-  --espresso-secondary: #9B4D1F; 
-  --espresso-dark: #7A3A0F;
-  --espresso-light: #F5D6B4;
-  --espresso-accent: #4B40DA;
+  /* Amber theme colors */
+  --amber-primary: #FEBD59;
+  --amber-secondary: #E59C38; 
+  --amber-dark: #C68422;
+  --amber-light: #FDDFAA;
+  --amber-accent: #FF9800;
   
   /* UI Colors */
   --card-bg: #1A1A1A;
   --border-color: #303030;
   --hover-color: #252525;
+  
+  /* Glow Effects */
+  --amber-glow: 0 0 10px rgba(254, 189, 89, 0.4), 0 0 20px rgba(254, 189, 89, 0.2);
+  --amber-glow-intense: 0 0 15px rgba(254, 189, 89, 0.6), 0 0 30px rgba(254, 189, 89, 0.3);
 }
 
 @theme inline {
@@ -39,58 +43,66 @@ body {
 
 /* Custom Button Styles */
 .btn-primary {
-  background-color: var(--espresso-primary);
+  background-color: var(--amber-primary);
   color: #121212;
   font-weight: 600;
   transition: all 0.2s ease;
+  box-shadow: var(--amber-glow);
+  border: 1px solid rgba(254, 189, 89, 0.6);
 }
 
 .btn-primary:hover {
-  background-color: var(--espresso-secondary);
+  background-color: var(--amber-secondary);
   transform: translateY(-1px);
+  box-shadow: var(--amber-glow-intense);
 }
 
 .btn-secondary {
-  background-color: var(--espresso-accent);
+  background-color: var(--amber-dark);
   color: white;
   font-weight: 600;
   transition: all 0.2s ease;
+  box-shadow: var(--amber-glow);
+  border: 1px solid rgba(254, 189, 89, 0.4);
 }
 
 .btn-secondary:hover {
   opacity: 0.9;
   transform: translateY(-1px);
+  box-shadow: var(--amber-glow-intense);
 }
 
 /* Card Styling */
 .espresso-card {
   background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--amber-dark);
   border-radius: 8px;
   overflow: hidden;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(254, 189, 89, 0.1);
 }
 
 .espresso-card:hover {
-  border-color: var(--espresso-primary);
-  box-shadow: 0 4px 20px rgba(212, 140, 61, 0.1);
+  border-color: var(--amber-primary);
+  box-shadow: var(--amber-glow);
 }
 
 /* Custom Text Styles */
 .espresso-heading {
   font-weight: 700;
-  color: var(--espresso-primary);
+  color: var(--amber-primary);
+  text-shadow: 0 0 8px rgba(254, 189, 89, 0.3);
 }
 
 .espresso-subheading {
-  color: #CCCCCC;
+  color: #DDDDDD;
   font-weight: 500;
 }
 
 /* Custom Input Styling */
 .espresso-input {
   background-color: #1E1E1E;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--amber-dark);
   border-radius: 6px;
   color: white;
   padding: 0.75rem;
@@ -98,7 +110,47 @@ body {
 }
 
 .espresso-input:focus {
-  border-color: var(--espresso-primary);
+  border-color: var(--amber-primary);
   outline: none;
-  box-shadow: 0 0 0 2px rgba(212, 140, 61, 0.2);
+  box-shadow: var(--amber-glow);
 }
+
+/* Amber Highlight Effects */
+.amber-text {
+  color: var(--amber-primary);
+  text-shadow: 0 0 8px rgba(254, 189, 89, 0.3);
+}
+
+.amber-border {
+  border: 1px solid var(--amber-primary);
+  box-shadow: var(--amber-glow);
+}
+
+.amber-gradient {
+  background: linear-gradient(135deg, var(--amber-primary), var(--amber-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Amber Animation */
+@keyframes amberPulse {
+  0% {
+    box-shadow: 0 0 5px rgba(254, 189, 89, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(254, 189, 89, 0.5), 0 0 30px rgba(254, 189, 89, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(254, 189, 89, 0.3);
+  }
+}
+
+.amber-pulse {
+  animation: amberPulse 2s infinite ease-in-out;
+}
+
+/* For backward compatibility */
+.gold-text { color: var(--amber-primary); text-shadow: 0 0 8px rgba(254, 189, 89, 0.3); }
+.gold-border { border: 1px solid var(--amber-primary); box-shadow: var(--amber-glow); }
+.gold-gradient { background: linear-gradient(135deg, var(--amber-primary), var(--amber-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.gold-pulse { animation: amberPulse 2s infinite ease-in-out; }
