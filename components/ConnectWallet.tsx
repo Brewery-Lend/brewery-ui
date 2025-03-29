@@ -77,7 +77,7 @@ export default function ConnectWallet({ usdcBalance }: ConnectWalletProps) {
                       type="button"
                       className="px-5 py-2.5 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors shadow-md"
                     >
-                      Wrong Network
+                      Switch Network
                     </button>
                   );
                 }
@@ -87,7 +87,7 @@ export default function ConnectWallet({ usdcBalance }: ConnectWalletProps) {
                     <div className="hidden md:flex text-sm space-x-2 items-center bg-[#1A1A1A] border border-[#303030] rounded-lg px-3 py-1.5">
                       <div className="flex items-center space-x-1">
                         <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                        <span className="text-gray-300">{chain?.name}</span>
+                        <span className="text-gray-300">{chain?.name === 'Sepolia' ? 'RWA Rollup' : chain?.name}</span>
                       </div>
                     </div>
 

@@ -27,10 +27,10 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="md:w-1/2">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
-                <span className="text-[#D48C3D]">Fuel</span> your finance with <span className="text-[#D48C3D]">Brewery</span>
+                <span className="text-[#D48C3D]">Ultra-Fast</span> RWA Lending on <span className="text-[#D48C3D]">Specialized Rollup</span>
               </h1>
               <p className="text-gray-300 text-lg md:text-xl mb-8 max-w-lg">
-                Cross-chain composability that makes all chains work together like one. Fast, reliable NFT-backed loans.
+                Borrow and lend against real-world assets with near-instant finality, powered by Espresso confirmations on our custom DeFi rollup.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link 
@@ -50,8 +50,8 @@ export default function Home() {
             <div className="md:w-1/2 flex justify-center">
               <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
                 <Image
-                  src="/espresso-logo.png"
-                  alt="Brewery Lend"
+                  src="/espresso-logo.svg"
+                  alt="Espresso RWA"
                   fill
                   className="object-contain"
                 />
@@ -66,10 +66,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              How <span className="text-[#D48C3D]">Brewery Lend</span> Works
+              How <span className="text-[#D48C3D]">Espresso RWA</span> Works
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Our protocol offers fast, reliable, and composable cross-chain NFT-backed loans with unparalleled features.
+              Our specialized DeFi rollup leverages Espresso confirmations to provide ultra-fast transactions for real-world asset lending.
             </p>
           </div>
           
@@ -81,9 +81,9 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Fast Finality</h3>
+              <h3 className="text-xl font-bold text-white mb-2">Specialized Rollup</h3>
               <p className="text-gray-400">
-                Receive strong confirmations in seconds for all chains using Espresso.
+                Our custom rollup is purpose-built for DeFi, optimizing for settlement speed and security for real-world assets.
               </p>
             </div>
             
@@ -94,9 +94,9 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Reliability</h3>
+              <h3 className="text-xl font-bold text-white mb-2">Espresso Confirmations</h3>
               <p className="text-gray-400">
-                BFT consensus offers a strong guarantee. Upcoming releases will add economic security.
+                BFT consensus with Espresso confirmations provides near-instant finality across our entire lending platform.
               </p>
             </div>
             
@@ -107,11 +107,111 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Composability</h3>
+              <h3 className="text-xl font-bold text-white mb-2">RWA Tokenization</h3>
               <p className="text-gray-400">
-                Espresso lays the foundation for cross-chain interactions that operate as if on one chain.
+                Our platform supports a wide range of tokenized real-world assets, from real estate to commodities and invoice factoring.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* RWA Asset Types Section */}
+
+      
+      {/* How It Works Section */}
+      {/* <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1A1A1A]">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">How Our DeFi Rollup Works</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="flex flex-col">
+              <div className="rounded-lg bg-[#121212] border border-[#303030] p-6 mb-8">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 rounded-full bg-[#D48C3D] flex items-center justify-center text-[#121212] font-bold text-lg mr-4">1</div>
+                  <h3 className="text-xl font-bold text-white">Custom Settlement Layer</h3>
+                </div>
+                <p className="text-gray-400">
+                  Our specialized DeFi rollup is optimized for fast settlement of complex RWA transactions, with custom data availability and execution environment.
+                </p>
+              </div>
+              
+              <div className="rounded-lg bg-[#121212] border border-[#303030] p-6 mb-8">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 rounded-full bg-[#D48C3D] flex items-center justify-center text-[#121212] font-bold text-lg mr-4">2</div>
+                  <h3 className="text-xl font-bold text-white">Espresso Confirmations</h3>
+                </div>
+                <p className="text-gray-400">
+                  Transactions are confirmed by Espresso Network's Byzantine Fault Tolerant consensus, providing near-instant finality and security.
+                </p>
+              </div>
+              
+              <div className="rounded-lg bg-[#121212] border border-[#303030] p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 rounded-full bg-[#D48C3D] flex items-center justify-center text-[#121212] font-bold text-lg mr-4">3</div>
+                  <h3 className="text-xl font-bold text-white">Cross-Chain Composability</h3>
+                </div>
+                <p className="text-gray-400">
+                  Assets can flow seamlessly between our rollup and other chains, with operations that work together as one unified system.
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex flex-col">
+              <div className="rounded-lg bg-[#121212] border border-[#303030] p-6 mb-8">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 rounded-full bg-[#D48C3D] flex items-center justify-center text-[#121212] font-bold text-lg mr-4">4</div>
+                  <h3 className="text-xl font-bold text-white">RWA Tokenization Layer</h3>
+                </div>
+                <p className="text-gray-400">
+                  Legal and compliance frameworks are built directly into the protocol, ensuring all RWA tokens have proper off-chain legal backing.
+                </p>
+              </div>
+              
+              <div className="rounded-lg bg-[#121212] border border-[#303030] p-6 mb-8">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 rounded-full bg-[#D48C3D] flex items-center justify-center text-[#121212] font-bold text-lg mr-4">5</div>
+                  <h3 className="text-xl font-bold text-white">Smart Lending Pools</h3>
+                </div>
+                <p className="text-gray-400">
+                  Our automated lending pools use advanced risk assessment algorithms to optimize rates based on collateral quality and market conditions.
+                </p>
+              </div>
+              
+              <div className="rounded-lg bg-[#121212] border border-[#303030] p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 rounded-full bg-[#D48C3D] flex items-center justify-center text-[#121212] font-bold text-lg mr-4">6</div>
+                  <h3 className="text-xl font-bold text-white">Automated Compliance</h3>
+                </div>
+                <p className="text-gray-400">
+                  Built-in compliance checks and automated reporting ensure all lending activities meet regulatory requirements across jurisdictions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+      
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="espresso-card p-6 text-center">
+              <h4 className="text-4xl md:text-5xl font-bold text-[#D48C3D] mb-2">1.2s</h4>
+              <p className="text-gray-300">Average Settlement Time</p>
+            </div>
+            {/* <div className="espresso-card p-6 text-center">
+              <h4 className="text-4xl md:text-5xl font-bold text-[#D48C3D] mb-2">$47M+</h4>
+              <p className="text-gray-300">Total RWA Value Locked</p>
+            </div>
+            <div className="espresso-card p-6 text-center">
+              <h4 className="text-4xl md:text-5xl font-bold text-[#D48C3D] mb-2">6.8%</h4>
+              <p className="text-gray-300">Average Lender APY</p>
+            </div>
+            <div className="espresso-card p-6 text-center">
+              <h4 className="text-4xl md:text-5xl font-bold text-[#D48C3D] mb-2">4</h4>
+              <p className="text-gray-300">RWA Asset Classes</p>
+            </div> */}
           </div>
         </div>
       </section>
@@ -120,43 +220,43 @@ export default function Home() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#121212] to-[#1A1A1A]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to get started with <span className="text-[#D48C3D]">Brewery Lend</span>?
+            Ready to access <span className="text-[#D48C3D]">ultra-fast RWA lending</span>?
           </h2>
           <p className="text-gray-300 mb-8 text-lg">
-            Join the ecosystem and experience the future of cross-chain composability.
+            Get started with our specialized DeFi rollup and experience the future of real-world asset finance.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link 
+            {/* <Link 
               href="/borrow" 
               className="px-8 py-3 bg-[#D48C3D] text-[#121212] font-semibold rounded-lg transition-all duration-200 hover:bg-[#9B4D1F] hover:shadow-lg hover:-translate-y-1"
             >
-              Join as Chain
-            </Link>
+              Browse RWA Assets
+            </Link> */}
             <Link 
               href="/lend" 
               className="px-8 py-3 bg-[#4B40DA] text-white font-semibold rounded-lg transition-all duration-200 hover:opacity-90 hover:shadow-lg hover:-translate-y-1"
             >
-              Join as Builder
+              Start Lending
             </Link>
-            <Link 
+            {/* <Link 
               href="/my-loans" 
               className="px-8 py-3 bg-[#1A1A1A] border border-[#303030] text-white font-semibold rounded-lg transition-all duration-200 hover:bg-[#252525] hover:border-[#D48C3D] hover:shadow-lg hover:-translate-y-1"
             >
-              Documentation
-            </Link>
+              Read Documentation
+            </Link> */}
           </div>
         </div>
       </section>
       
       {/* Footer */}
       <footer className="bg-[#121212] border-t border-[#303030] py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        {/* <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center mb-6 md:mb-0">
               <div className="relative h-10 w-10 mr-2">
                 <Image
-                  src="/espresso-logo.png"
-                  alt="Espresso Logo"
+                  src="/espresso-logo.svg"
+                  alt="Espresso RWA Logo"
                   width={40}
                   height={40}
                   className="rounded-md"
@@ -164,17 +264,17 @@ export default function Home() {
               </div>
               <div>
                 <span className="text-[#D48C3D] text-xl font-bold">Espresso</span>
-                <span className="text-white text-xl font-bold ml-1">Finance</span>
+                <span className="text-white text-xl font-bold ml-1">RWA</span>
               </div>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 md:mb-0">
               <div>
-                <h3 className="text-[#D48C3D] font-semibold mb-3">Product</h3>
+                <h3 className="text-[#D48C3D] font-semibold mb-3">Platform</h3>
                 <ul className="space-y-2">
                   <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Documentation</a></li>
-                  <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Protocols</a></li>
-                  <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Developers</a></li>
+                  <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Rollup Technology</a></li>
+                  <li><a href="#" className="text-gray-400 hover:text-white transition-colors">RWA Whitelisting</a></li>
                 </ul>
               </div>
               <div>
@@ -182,7 +282,7 @@ export default function Home() {
                 <ul className="space-y-2">
                   <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
                   <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Research</a></li>
-                  <li><a href="#" className="text-gray-400 hover:text-white transition-colors">News</a></li>
+                  <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Rate Oracle</a></li>
                 </ul>
               </div>
               <div>
@@ -198,7 +298,7 @@ export default function Home() {
                 <ul className="space-y-2">
                   <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
                   <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
-                  <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Cookies</a></li>
+                  <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Compliance</a></li>
                 </ul>
               </div>
             </div>
@@ -206,7 +306,7 @@ export default function Home() {
           
           <div className="border-t border-[#303030] mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm mb-4 md:mb-0">
-              © 2024 Brewery Lend. All rights reserved.
+              © 2024 Espresso RWA. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-400 hover:text-[#D48C3D]">
@@ -229,7 +329,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
       </footer>
     </main>
   );

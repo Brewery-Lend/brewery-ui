@@ -26,7 +26,8 @@ export default function Header({ usdcBalance }: HeaderProps) {
     { href: '/', label: 'Home' },
     { href: '/borrow', label: 'Borrow' },
     { href: '/lend', label: 'Lend' },
-    { href: '/my-loans', label: 'My Loans' },
+    { href: '/my-loans', label: 'My Portfolio' },
+    { href: '/assets', label: 'RWA Assets' },
   ];
 
   const isCurrentPath = (path: string) => pathname === path;
@@ -39,17 +40,17 @@ export default function Header({ usdcBalance }: HeaderProps) {
             <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="flex items-center" onClick={closeMenu}>
                 <div className="relative h-10 w-10 mr-2">
-                  {/* <Image
+                  <Image
                     src="/espresso-logo.png"
-                    alt="Espresso Logo"
+                    alt="Espresso RWA Logo"
                     width={40}
                     height={40}
                     className="rounded-md"
-                  /> */}
+                  />
                 </div>
                 <div>
-                  <span className="text-[#D48C3D] text-xl font-bold">Brewery</span>
-                  <span className="text-white text-xl font-bold ml-1">Lend</span>
+                  <span className="text-[#D48C3D] text-xl font-bold">Espresso</span>
+                  <span className="text-white text-xl font-bold ml-1">RWA</span>
                 </div>
               </Link>
             </div>

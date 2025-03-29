@@ -10,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Brewery Lend - NFT Lending",
-  description: "Borrow and lend with NFT collateral on Brewery Lend - Cross-chain composability.",
+  title: "Espresso RWA - Ultra-Fast Real World Asset Lending",
+  description: "Ultra-fast RWA lending on a specialized DeFi rollup powered by Espresso confirmations. Borrow and lend with real-world asset collateral with near-instant finality.",
   icons: {
     icon: '/espresso-logo.png',
   }
