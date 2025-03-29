@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Brewery Lend - NFT Lending Platform
+
+Brewery Lend is a decentralized platform for borrowing and lending cryptocurrency using NFTs as collateral. The platform provides a seamless way for NFT owners to unlock liquidity from their assets without having to sell them.
+
+## Features
+
+- **Borrow**: Use your NFTs as collateral to take out USDC loans
+- **Lend**: Fund loan requests and earn interest on your USDC
+- **Transparent Terms**: Clear loan terms including amount, interest rate, and duration
+- **Easy Management**: Monitor your borrowing and lending activities in one place
+- **Secure Collateral**: NFTs are held in a secure escrow contract during the loan period
+
+## Tech Stack
+
+- **Frontend**: Next.js, React, TypeScript, TailwindCSS
+- **Blockchain Integration**: ethers.js, wagmi, RainbowKit
+- **Smart Contracts**: Solidity (BrewLend, CollateralEscrow)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js (v16+)
+- A web3 wallet (like MetaMask)
+- Access to a blockchain with the deployed BrewLend contracts
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/brewery-lend.git
+   cd brewery-lend
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. Configure contract addresses:
+   - Update the contract addresses in `config/contracts.ts` with your deployed contract addresses
 
-To learn more about Next.js, take a look at the following resources:
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## How It Works
 
-## Deploy on Vercel
+### For Borrowers
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Connect your wallet and navigate to the "Borrow" page
+2. Fill in the loan request form:
+   - Specify the NFT contract address and token ID
+   - Set the loan amount, interest rate, and duration
+3. Create the loan order by approving the NFT transfer and confirming the transaction
+4. Wait for a lender to fund your loan
+5. Receive USDC in your wallet once funded
+6. Repay the loan before the deadline to reclaim your NFT
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### For Lenders
+
+1. Connect your wallet and navigate to the "Lend" page
+2. Browse available loan requests
+3. Fund a loan by approving the USDC transfer and confirming the transaction
+4. Monitor your funded loans
+5. Receive your principal plus interest when the borrower repays
+6. If a borrower defaults, claim their NFT collateral
+
+## Contract Addresses
+
+- BrewLend: `0x5FbDB2315678afecb367f032d93F642f64180aa3` (example)
+- USDC: `0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512` (example)
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- OpenZeppelin for secure contract libraries
+- Ethereum community for support and resources
