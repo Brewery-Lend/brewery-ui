@@ -8,7 +8,7 @@ const RPC_URL = 'http://44.203.209.141:8547';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: any
 ) {
   try {
     const orderId = params.id;

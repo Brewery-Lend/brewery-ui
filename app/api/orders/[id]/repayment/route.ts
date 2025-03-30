@@ -4,11 +4,11 @@ import { BREWLEND_CONTRACT_ADDRESS } from '../../../../../config/contracts';
 import brewLendABI from '../../../../../abi/brewLend.json';
 
 // You would normally use environment variables for this
-const RPC_URL = ' ec2-44-203-209-141.compute-1.amazonaws.com:8547';
+const RPC_URL = 'http://44.203.209.141:8547';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: any
 ) {
   try {
     const orderId = params.id;

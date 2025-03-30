@@ -95,7 +95,7 @@ export async function GET() {
         orders: [
           {
             orderId: '1',
-            borrower: '0x70997970C51812dc3A010C7d01b50e0d17dc79C8', // This is a test borrower
+            borrower: '0x70997970C51812dc3A010C7d01b50e0d17dc79C8',
             lender: '0x0000000000000000000000000000000000000000',
             nftContract: '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512',
             tokenId: '1',

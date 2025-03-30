@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { createProxyContract, proxyCall } from '../utils/blockchainProxy';
-import { BREWLEND_CONTRACT_ADDRESS } from '../config/contracts';
-import brewLendABI from '../abi/brewLend.json';
+import { createProxyContract, proxyCall } from '../../utils/blockchainProxy';
+import { BREWLEND_CONTRACT_ADDRESS } from '../../config/contracts';
+import brewLendABI from '../../abi/brewLend.json';
 
 /**
  * Hook to fetch available loan orders
@@ -29,7 +29,7 @@ export function useAvailableOrders() {
           throw new Error(data.error || 'Failed to fetch orders');
         }
         
-      } catch (err) {
+      } catch (err:any) {
         console.error('Error fetching orders:', err);
         setError(err.message);
       } finally {
@@ -46,7 +46,7 @@ export function useAvailableOrders() {
 /**
  * Hook to interact with a specific loan order
  */
-export function useLoanOrder(orderId) {
+export function useLoanOrder(orderId:any) {
   const [order, setOrder] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -69,7 +69,7 @@ export function useLoanOrder(orderId) {
         } else {
           throw new Error(data.error || 'Failed to fetch order details');
         }
-      } catch (err) {
+      } catch (err:any) {
         console.error(`Error fetching order ${orderId}:`, err);
         setError(err.message);
       } finally {
@@ -94,7 +94,7 @@ export function useBrewLendContract() {
   };
 
   // Function to call a read method on the contract
-  const callMethod = async (methodName, ...args) => {
+  const callMethod = async (methodName :any, ...args : any) => {
     return proxyCall(BREWLEND_CONTRACT_ADDRESS, brewLendABI, methodName, args);
   };
 

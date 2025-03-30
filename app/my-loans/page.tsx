@@ -105,10 +105,10 @@ export default function MyLoansPage() {
                           key={order.orderId}
                           order={order}
                           userAddress={address}
-                          onFund={() => {}}
+                          onFund={():any => {}}
                           onRepay={repayLoan}
                           onCancel={cancelLoanOrder}
-                          onClaim={() => {}}
+                          onClaim={():any => {}}
                           isLoading={isLoading}
                         />
                       ))}
@@ -142,9 +142,9 @@ export default function MyLoansPage() {
                           key={order.orderId}
                           order={order}
                           userAddress={address}
-                          onFund={() => {}}
-                          onRepay={() => {}}
-                          onCancel={() => {}}
+                          onFund={():any => {}}
+                          onRepay={():any => {}}
+                          onCancel={():any => {}}
                           onClaim={claimDefaultedNFT}
                           isLoading={isLoading}
                         />

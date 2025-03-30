@@ -13,10 +13,10 @@ import {
 interface LoanOrderCardProps {
   order: LoanOrder;
   userAddress: string | undefined;
-  onFund: (orderId: number) => Promise<any>;
-  onRepay: (orderId: number) => Promise<any>;
-  onCancel: (orderId: number) => Promise<any>;
-  onClaim: (orderId: number) => Promise<any>;
+  onFund: (orderId: any) => Promise<any>;
+  onRepay: (orderId: any) => Promise<any>;
+  onCancel: (orderId: any) => Promise<any>;
+  onClaim: (orderId: any) => Promise<any>;
   isLoading: boolean;
 }
 

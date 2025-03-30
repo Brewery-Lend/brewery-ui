@@ -100,10 +100,10 @@ export default function BorrowPage() {
                       key={order.orderId}
                       order={order}
                       userAddress={address}
-                      onFund={() => {}}
+                      onFund={():any => {}}
                       onRepay={repayLoan}
                       onCancel={cancelLoanOrder}
-                      onClaim={() => {}}
+                      onClaim={():any => {}}
                       isLoading={isLoading}
                     />
                   ))}
@@ -133,10 +133,10 @@ export default function BorrowPage() {
                       key={order.orderId}
                       order={order}
                       userAddress={address}
-                      onFund={() => {}}
-                      onRepay={() => {}}
-                      onCancel={() => {}}
-                      onClaim={() => {}}
+                      onFund={():any => {}}
+                      onRepay={():any => {}}
+                      onCancel={():any => {}}
+                      onClaim={():any => {}}
                       isLoading={isLoading}
                     />
                   ))}
